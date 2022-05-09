@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pionix</string>
+<string name="facebook_app_id">324765663129786</string>
+<string name="fb_login_protocol_scheme">fb324765663129786</string>
+<string name="facebook_client_token">902a2d0f6dd761f4d13cf021044a7ecd</string  >
+
+
+</resources>
