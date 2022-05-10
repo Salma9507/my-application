@@ -33,8 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   // firebase
   final _auth = FirebaseAuth.instance;
-  
-  // for displaying the error Message
+
   String? errorMessage;
 
 
@@ -248,15 +247,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
               }),
 
-         /* GestureDetector(
-              child: Image.asset(
-                "assets/instagram.png",
-                width: 157,
-              ),
-              onTap: () {
-
-
-              }),*/
 
           GestureDetector(
               child: Image.asset(

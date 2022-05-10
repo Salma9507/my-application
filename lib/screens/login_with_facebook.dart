@@ -57,14 +57,13 @@ class _LoginWithFacebookState extends State<LoginWithFacebook> {
       permissions: ['email', 'public_profile', 'user_birthday']
     );
 
-    // Create a credential from the access token
     final OAuthCredential facebookAuthCredential = FacebookAuthProvider.credential(loginResult.accessToken!.token);
 
     final userData = await FacebookAuth.instance.getUserData();
 
     userEmail = userData['email'];
 
-    // Once signed in, return the UserCredential
+
     return FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
   }
 }

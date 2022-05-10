@@ -8,9 +8,6 @@ import '../model/user_model.dart';
 import 'home_screen.dart';
 
 
-
-
-
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({Key? key}) : super(key: key);
 
@@ -21,13 +18,13 @@ class RegistrationScreen extends StatefulWidget {
 class _RegistrationScreenState extends State<RegistrationScreen> {
   final _auth = FirebaseAuth.instance;
   
-  // string for displaying the error Message
+
   String? errorMessage;
 
 
-  // our form key
+
   final _formKey = GlobalKey<FormState>();
-  // editing Controller
+
   final firstNameEditingController = new TextEditingController();
   final secondNameEditingController = new TextEditingController();
   final emailEditingController = new TextEditingController();
@@ -267,15 +264,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           case "user-not-found":
             errorMessage = "User with this email doesn't exist.";
             break;
-          case "user-disabled":
-            errorMessage = "User with this email has been disabled.";
-            break;
-          case "too-many-requests":
-            errorMessage = "Too many requests";
-            break;
-          case "operation-not-allowed":
-            errorMessage = "Signing in with Email and Password is not enabled.";
-            break;
+
           default:
             errorMessage = "An undefined Error happened.";
         }
@@ -285,9 +274,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     }
   }
   postDetailsToFirestore() async {
-    // calling our firestore
-    // calling our user model
-    // sedning these values
 
     FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
     User? user = _auth.currentUser;
